@@ -25,10 +25,10 @@ Below are some more specific instructions about the expected flow of the applica
   - You should have the ability to _delete_ the `Post`
   - All of the `Post` `Comments` should be listed here
   - You should also be able to add new `Comments`
-    - Each comment listed should have an a way to _edit_ and _delete_ it
+    - You should be able to _edit_ and _delete_ each existin comment
     - How you choose to implement _editing_ and _deletion_ of comments is up to you. If you want to send an `AJAX` request, and write some javascript to handle updates that is fine, you can also wire it up in a more standard `Rails` way and have it do a full page turn.
 
-These are the basic requirements of the challenge. If you are able to get all of this functionality completed you will be in a pretty good spot. Of course there is much more you can do with this challenge. If there is additional functionality that you would like to add, please feel free to do so. Though, would prefer a sound limited app, over a fully featured app that was more rough around the edges.
+These are the basic requirements of the challenge. If you are able to get all of this functionality completed you will be in a pretty good spot. Of course there is much more you can do with this challenge. If there is additional functionality that you would like to add, please feel free to do so. Though, we would prefer a sound limited app, over a fully featured app that was more rough around the edges.
 
 
 ## Mockups
