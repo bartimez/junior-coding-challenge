@@ -30,9 +30,15 @@ Below are some more specific instructions about the expected flow of the applica
 
 These are the basic requirements of the challenge. If you are able to get all of this functionality completed you will be in a pretty good spot. Of course there is much more you can do with this challenge. If there is additional functionality that you would like to add, please feel free to do so. Though, we would prefer a sound limited app, over a fully featured app that was more rough around the edges.
 
+Be sure to comment your code so we can see that you understand what is going on, especially if you use scaffolding to generate resources!
+
+## Starter Code
+This project comes with some starter code to help you along. We have provided the skeleton for the `PostsController`,  and the `Post` model. Corresponding views have been created in the `app/views/posts` directory. As well as routes, in the `config/routes.rb` file, and migrations in the `db/migrate` directory.
+
+This is to provide you with some basic setup so you are not starting from absolutely nothing. There have also been some comments added to point you in the direction of helpful documentation.
 
 ## Mockups
-We've included some mockups below to help you visualize this site. Though, please do not feel that you have to model the layout of your site after these mockups. You are free to style your site however you want! These are provided strictly as another resource for you, and are by no means strict guidelines.
+We've included some mockups below to help you visualize this site. Though, please do not feel that you have to model the layout of your site after these mockups. You are free to style your site however you want! These are provided as another resource for you, and are by no means strict guidelines.
 
 **Viewing All Post**
 ![](docs/assets/post-index.png)
