@@ -1,1 +1,16 @@
 <!-- View for showing all `Post` -->
+<!--
+  Use ERB to interpolate Ruby in the HTML.
+  If, after the opening carat:
+    No equals = result hidden
+    Equals = result output in place of the clause
+-->
+<h1>All Posts</h1>
+
+<ul id="posts">
+  <% @posts.each do |post| %>
+    <li>
+      <%= link_to post.title, post_path(post), class: 'post_title' %>
+    </li>
+  <% end %>
+</ul>
