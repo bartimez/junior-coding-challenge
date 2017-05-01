@@ -9,6 +9,9 @@
   </head>
 
   <body>
+    <%= link_to "Create a New Post", new_post_path, class: "new_post" %>
+    
+    <!-- yield tag - where content from the view should be inserted -->
     <%= yield %>
   </body>
 </html>
