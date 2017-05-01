@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
   def index
     # Return all `Post`
+    # Mark posts as an instance-level var so all posts are accessible both here and in the view 
+    @posts = Post.all
   end
 
   def new
