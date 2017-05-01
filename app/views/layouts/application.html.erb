@@ -1,3 +1,4 @@
+<!-- Layouts wrap multiple views --> 
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,6 +11,9 @@
 
   <body>
     <%= link_to "Create a New Post", new_post_path, class: "new_post" %>
+
+    <!-- output our various notices upon user action -->
+    <p class="flash"><%= flash.notice %></p>
     
     <!-- yield tag - where content from the view should be inserted -->
     <%= yield %>
