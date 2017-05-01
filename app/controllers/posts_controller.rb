@@ -19,6 +19,9 @@ class PostsController < ApplicationController
     # this is what handles the user-entered form data
     @post = Post.new(post_params)
     @post.save
+
+    flash.notice = "Post created!"
+
     redirect_to post_path(@post)
   end
 
@@ -30,5 +33,11 @@ class PostsController < ApplicationController
 
   def destroy
     # Remove a `Post` from the database
+    @post = Post.find(params[:id])
+    @post.destroy
+
+    flash.notice = "Post deleted!"
+
+    redirect_to posts_path
   end
 end

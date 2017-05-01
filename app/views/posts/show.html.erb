@@ -1,4 +1,5 @@
 <!-- View for showing a single `Post` -->
 <h1><%= @post.title %></h1>
 <p><%= @post.body %></p>
+<%= link_to "Delete Post", post_path(@post), method: :delete %>
 <%= link_to "Back to All Posts", posts_path %>
