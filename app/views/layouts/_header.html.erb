@@ -1,0 +1,19 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <%= link_to "CareerBlog", root_path, class: "navbar-brand" %>
+    </div>
+    <div id="navbar">
+      <ul class="nav navbar-nav navbar-left">
+        <li><%= link_to "See All Posts", root_path, class: "nav-button" %></li>
+        <li><%= link_to "Create a New Post", new_post_path, class: "nav-button" %></li>
+      </ul>
+    </div>
+    <%= form_tag(posts_path, method: :get, class: "navbar-form navbar-right") do %>
+      <div class="form-group">
+      <%= text_field_tag(:search, params[:search], placeholder: "Search posts . . .", class: "form-control") %>
+      <%= submit_tag("Search", name: nil, class: "btn btn-sm") %>
+      </div>
+    <% end %>
+  </div>
+</nav>

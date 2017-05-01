@@ -6,6 +6,7 @@
 <h3>Comments (<%= @post.comments.size %>)</h3>
 <!-- render a form for posting a new comment -->
 <!-- expects app/views/comments/_form.html.erb -->
+<!-- TO LOOK UP: Removing the partials here threw an error in my _comment.html.erb file-->
 <%= render partial: 'comments/form' %>
 <!-- render the comments assoc'd with this post in reverse order -->
 <!-- expects app/views/posts/_comment.html.erb -->

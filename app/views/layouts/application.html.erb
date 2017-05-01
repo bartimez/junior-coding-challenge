@@ -10,13 +10,7 @@
   </head>
 
   <body>
-    <%= link_to "Create a New Post", new_post_path, class: "new_post" %>
-    
-    <!-- have to add get because the method for form_tag defaults to post -->
-    <%= form_tag(posts_path, method: :get, id: "search-form") do %>
-      <%= text_field_tag(:search, params[:search], placeholder: "Search posts . . .") %>
-      <%= submit_tag("Search", name: nil) %>
-    <% end %>
+    <%= render partial: 'layouts/header' %>
 
     <!-- output our various notices upon user action -->
     <p class="flash"><%= flash.notice %></p>
