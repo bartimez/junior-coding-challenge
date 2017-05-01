@@ -3,3 +3,10 @@
 <p><%= @post.body %></p>
 <%= link_to "Delete Post", post_path(@post), method: :delete %>
 <%= link_to "Back to All Posts", posts_path %>
+<h3>Comments (<%= @post.comments.size %>)</h3>
+<!-- render a form for posting a new comment -->
+<!-- expects app/views/comments/_form.html.erb -->
+<%= render partial: 'comments/form' %>
+<!-- render the comments assoc'd with this post in reverse order -->
+<!-- expects app/views/posts/_comment.html.erb -->
+<%= render partial: 'posts/comment', collection: @post.comments.reverse %>

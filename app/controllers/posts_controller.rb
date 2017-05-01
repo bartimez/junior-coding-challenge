@@ -29,6 +29,10 @@ class PostsController < ApplicationController
     # Show a single `Post`
     # params method returns a hash (obj-ish) of the request params, w/an ID key
     @post = Post.find(params[:id])
+
+    @comment = Comment.new
+    # id attribute must be manually assigned (not passed) b/c of Rails' mass-assignment protection
+    @comment.post_id = @post.id
   end
 
   def destroy
