@@ -4,12 +4,12 @@
     <div class="one-blog-post">
       <h2 class="one-blog-post-title"><%= @post.title %></h2>
       <p class="one-blog-post-body"><%= @post.body %></p>
-      <div class="btn btn-default"><%= link_to "Delete Post", post_path(@post), method: :delete %></div>
-      <div class="btn btn-default"><%= link_to "Back to All Posts", posts_path %></div>
+      <div class="btn btn-default submit-btn"><%= link_to "Delete Post", post_path(@post), method: :delete %></div>
+      <div class="btn btn-default submit-btn"><%= link_to "Back to All Posts", posts_path %></div>
 
       <hr>
 
-      <h3>Comments (<%= @post.comments.size %>)</h3>
+      <h3 class="comment-title">Comments (<%= @post.comments.size %>)</h3>
 
       <hr>
 

@@ -1,8 +1,15 @@
-<div class="container comment-container">
-  <p class="comment"><%= comment.body%></p>
-  <p class="comment-timestamp">Posted <b><%= time_ago_in_words(comment.created_at) %></b> ago</p>
-  <div class="btn btn-default"><%= link_to "Delete Comment", post_comment_path(comment.post.id, comment.id), method: 'delete' %></div>
-  <div class="btn btn-default"><%= link_to "Edit Comment", edit_post_comment_path(comment.post.id, comment.id), method: 'get' %></div>
+<div class="container">
+  <p class="comment-body"><%= comment.body%></p>
+  <p class="comment-timestamp">
+    Posted <b><%= time_ago_in_words(comment.created_at) %></b> ago
+  </p>
+
+  <div class="btn btn-default submit-btn-cmt">
+    <%= link_to "Delete Comment", post_comment_path(comment.post.id, comment.id), method: 'delete' %>
+  </div>
+  <div class="btn btn-default submit-btn-cmt">
+    <%= link_to "Edit Comment", edit_post_comment_path(comment.post.id, comment.id), method: 'get' %>
+  </div>
 </div>
 
 <hr>

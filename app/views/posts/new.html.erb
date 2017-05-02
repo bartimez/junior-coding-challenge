@@ -2,19 +2,17 @@
 <!-- See http://guides.rubyonrails.org/form_helpers.html#dealing-with-basic-forms for more information -->
 <div class="container">
   <div class="col-sm-12 blog-main">
-    <h3>Create a New Post</h3>
-
-    <hr>
+    <h3 class="create-head">Create a New Post</h3>
 
     <%= form_for(@post) do |f| %>
       <div class="form-group">
         <p>
-          <%= f.label :title %><br />
+          <%= f.label :title, class: "create-title" %><br />
           <%= f.text_field :title, class: "form-control" %>
         </p>
         <p>
-          <%= f.label :body %><br />
-          <%= f.text_area :body, class: "form-control" %>
+          <%= f.label :body, class: "create-title" %><br />
+          <%= f.text_area :body, class: "form-control create-rows" %>
         </p>
         <p>
           <%= f.submit 'Create Post', class: "btn btn-default submit-btn" %>

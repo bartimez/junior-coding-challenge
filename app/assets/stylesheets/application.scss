@@ -10,17 +10,24 @@ body {
 }
 .submit-btn {
   color: #337ab7;
+  font-weight: 200;
+  font-size: 17px;
 }
 
 // Nav
 
 .blog-nav-item {
-  font-weight: 300;
-  font-size: 17px;
+  font-weight: 200;
+  font-size: 18px;
+  margin-top: 2px;
 }
 .blog-nav-item:hover {
   color: #fff;
   text-decoration: none;
+}
+.blog-nav-search {
+  font-weight: 200;
+  font-size: 16px;
 }
 
 //Main title
@@ -33,10 +40,12 @@ body {
   margin-top: 25px;
   margin-bottom: 5px;
   font-size: 65px;
-  font-weight: 400;
+  font-weight: 100;
 }
 .blog-description {
   font-size: 20px;
+  font-weight: 200;
+  opacity: 0.95;
   color: #999;
 }
 
@@ -55,11 +64,13 @@ body {
 }
 .blog-post-title {
   margin-bottom: 5px;
-  font-size: 30px;
+  font-size: 32px;
+  font-weight: 100;
 }
 .blog-post-body {
   padding-top: 15px;
   padding-bottom: 15px;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif
 }
 .blog-post-timestamp {
   font-size: 14px;
@@ -72,10 +83,16 @@ body {
   padding: 15px;
   margin: 15px;
 }
+.sidebar-module h4 {
+  font-weight: 400;
+}
 .sidebar-module-inset {
   padding: 15px;
   background-color: #f5f5f5;
   border-radius: 4px;
+}
+.sidebar-text {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
 // Single-view posts
@@ -87,16 +104,49 @@ body {
 .one-blog-post-title {
   margin-bottom: 20px;
   font-size: 35px;
+  font-weight: 100;
 }
 .one-blog-post-body {
   margin-top: 10px;
   margin-bottom: 25px;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif
+
 }
 
 // Comments
 
+.comment-title {
+  font-weight: 100;
+}
+.leave-comment {
+  font-weight: 100;
+  padding-bottom: 6px;
+}
+.comment-body {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif
+}
 .comment-timestamp {
   font-size: 13px;
   opacity: 0.8;
 }
+.submit-btn-cmt {
+  color: #337ab7;
+  font-weight: 200;
+  font-size: 14px;
+}
 
+// Create
+
+.create-title {
+  font-weight: 100;
+  font-size: 22px;
+  padding: 5px;
+}
+.create-head {
+  font-weight: 100;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+textarea.form-control.create-rows {
+  height: 300px;
+}
