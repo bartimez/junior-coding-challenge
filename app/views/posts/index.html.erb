@@ -27,22 +27,10 @@
     <% end %>
     </div>
     <!-- end main column --> 
-
-    <!-- begin sidebar -->
-    <div class="col-sm-3">
-      <div class="sidebar-module sidebar-module-inset">
-        <h4>About</h4>
-        <p class="sidebar-text">Freshly-minted, super-determined lady dev seeks employment at CareerPlug by making a simple, minimal blog app in Rails.</p>
-      </div>
-      <div class="sidebar-module">
-        <h4>Me, In the Wild</h4>
-        <ol class="list-unstyled">
-          <li><a href="https://github.com/bartimez">GitHub</a></li>
-          <li><a href="http://linkedin.com/in/brittany-artimez">LinkedIn</a></li>
-        </ol>
-      </div>
-    </div>
-    <!-- end sidebar -->
+    
+    <!-- render the sidebar -->
+    <!-- expects app/views/posts/_sidebar.html.erb -->
+    <%= render partial: 'posts/sidebar' %>
 
   </div> <!-- end row -->
 
