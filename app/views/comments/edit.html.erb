@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="col-sm-12 blog-main">
+    <h3>Edit Comment</h3>
+
+    <hr>
+
+    <%= form_for([ @post, @comment ], url: post_comment_path, method: 'put') do |f| %>
+      <div class="form-group">
+        <p>
+          <%= f.text_area :body, class: "form-control" %>
+        </p>
+        <p>
+          <%= f.submit 'Save Comment', class: "btn btn-default" %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+

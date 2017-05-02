@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: 'posts#index'
   
   resources :posts, only: [:index, :new, :create, :show, :destroy] do
-    resources :comments, only: [:create, :destroy]
+    resources :comments, only: [:create, :edit, :update, :destroy]
   end
 
 end
