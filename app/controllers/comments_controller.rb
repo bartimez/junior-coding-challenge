@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-    # make our comments helper fns available here
+  # make our comments helper fns available here
   include CommentsHelper
 
   def create
@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
 
     @comment.save
 
-    #redirect to the whole post, not just the comment
+    # redirect to the whole post, not just the comment
     redirect_to post_path(@comment.post)
   end
 

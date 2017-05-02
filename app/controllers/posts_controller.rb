@@ -8,9 +8,9 @@ class PostsController < ApplicationController
     # @posts = Post.all
 
     if params[:search]
-      @posts = Post.search(params[:search]).order("created_at DESC")
+      @posts = Post.search(params[:search]).order('created_at DESC')
     else
-      @posts = Post.all.order("created_at DESC")
+      @posts = Post.all.order('created_at DESC')
     end
 
   end
@@ -36,7 +36,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
 
     @comment = Comment.new
-    # id attribute must be manually assigned (not passed) b/c of Rails' mass-assignment protection
+    # id attribute must be manually assigned (not passed)
     @comment.post_id = @post.id
   end
 

@@ -4,7 +4,7 @@ class Post < ApplicationRecord
 
   # build the search method for our search posts form
   def self.search(search)
-    where("title || body LIKE ?", "%#{search}%")
+    where('title || body LIKE ?', "%#{search}%")
   end
 
 end
