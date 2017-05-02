@@ -19,19 +19,18 @@
 
 body { 
   padding-top: 60px; 
-  color: #555;
+  color: #333;
 }
 
 // Nav
 
 .blog-nav-item {
   padding: 10px;
-  font-weight: 500;
-  font-size: 16px;
+  font-weight: 300;
+  font-size: 17px;
   color: #cdddeb;
 }
-.blog-nav-item:hover,
-.blog-nav-item:focus {
+.blog-nav-item:hover {
   color: #fff;
   text-decoration: none;
 }
@@ -45,8 +44,8 @@ body {
 .blog-title {
   margin-top: 25px;
   margin-bottom: 5px;
-  font-size: 60px;
-  font-weight: normal;
+  font-size: 65px;
+  font-weight: 400;
 }
 .blog-description {
   font-size: 20px;
@@ -60,7 +59,7 @@ body {
   line-height: 1.5;
 }
 
-//Individual posts
+//Main posts
 
 .blog-post {
   margin-bottom: 25px;
@@ -68,7 +67,7 @@ body {
 }
 .blog-post-title {
   margin-bottom: 5px;
-  font-size: 35px;
+  font-size: 30px;
 }
 .blog-post-body {
   padding-top: 15px;
@@ -87,5 +86,25 @@ body {
   border-radius: 4px;
 }
 
+// Single-view posts
 
+.one-blog-post {
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+.one-blog-post-title {
+  margin-bottom: 20px;
+  font-size: 35px;
+}
+.one-blog-post-body {
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+// Comments
+
+.comment-timestamp {
+  font-size: 13px;
+  opacity: 0.8;
+}
 

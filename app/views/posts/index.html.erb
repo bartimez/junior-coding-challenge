@@ -19,7 +19,7 @@
         <div class="blog-post">
           <h2 class="blog-post-title"><%= post.title %></h2>
           <p class="blog-post-body"><%= post.body[0..200] %> . . .</p>
-          <div class="btn btn-default"><%= link_to "Comments", post_path(post), class: 'post_title' %></div>
+          <div class="btn btn-default"><%= link_to "Comments (#{post.comments.size})", post_path(post), class: 'post_title' %></div>
         </div>
         <hr>
       <% end %>
