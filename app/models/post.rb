@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
-  # wire the other half of the post/comment relationship
+  # second half of the `Post`/`Comment` one-to-many relationship
   has_many :comments, dependent: :destroy
 
   # build the search method for our search posts form

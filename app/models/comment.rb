@@ -1,4 +1,4 @@
 class Comment < ApplicationRecord
-  # article:references command generated this relationship between `Comment` and `Post`
+  # first half of the `Post`/`Comment` one-to-many relationship
   belongs_to :post
 end

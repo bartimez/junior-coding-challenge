@@ -1,7 +1,9 @@
 <!-- View for showing a single `Post` -->
 <div class="container">
   <div class="col-sm-12 blog-main">
+
     <div class="one-blog-post">
+    
       <h2 class="one-blog-post-title"><%= @post.title %></h2>
       <p class="one-blog-post-body"><%= @post.body %></p>
       <div class="btn btn-default submit-btn"><%= link_to "Delete Post", post_path(@post), method: :delete %></div>
@@ -22,5 +24,6 @@
       <%= render partial: 'comments/form' %>
 
     </div>
+    
   </div>
 </div>

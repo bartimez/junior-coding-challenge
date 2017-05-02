@@ -1,16 +1,23 @@
+<!--Partial for the app-level navbar w/search-->
 <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
   <div class="container">
+    
     <div id="navbar">
       <ul class="nav navbar-nav navbar-left">
         <li><%= link_to "See All Posts", root_path, class: "blog-nav-item" %></li>
         <li><%= link_to "Create a New Post", new_post_path, class: "blog-nav-item" %></li>
       </ul>
     </div>
+    
+    <!--Begin search-->
+    <!--Using form_tag and not form_for because we're not manipulating the record data-->
     <%= form_tag(posts_path, method: :get, class: "navbar-form navbar-right") do %>
       <div class="form-group">
       <%= text_field_tag(:search, params[:search], placeholder: "Search posts . . .", class: "form-control blog-nav-search") %>
       <%= submit_tag("Search", name: nil, class: "btn btn-default submit-btn") %>
       </div>
     <% end %>
+    <!--End search-->
+
   </div>
 </nav>

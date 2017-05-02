@@ -15,7 +15,7 @@ class PostsController < ApplicationController
   end
 
   def new
-    # Return view to create a new Post
+    # Return view to create a new `Post`
     # this is what loads the create-new-post form
     @post = Post.new
   end

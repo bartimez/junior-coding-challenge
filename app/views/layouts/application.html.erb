@@ -1,4 +1,4 @@
-<!-- Layouts wrap multiple views --> 
+<!-- Top-level app view -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,9 +10,11 @@
   </head>
 
   <body>
+    <!-- render the header w/navbar -->
+    <!-- expects app/views/layouts/_header.html.erb -->
     <%= render partial: 'layouts/header' %>
 
-    <!-- yield tag - where content from the view should be inserted -->
+    <!-- where remaining content will be inserted -->
     <%= yield %>
   </body>
 </html>

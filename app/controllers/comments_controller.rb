@@ -9,17 +9,17 @@ class CommentsController < ApplicationController
 
     @comment.save
 
-    # redirect to the whole post, not just the comment
+    # redirect to the whole `Post`, not just the `Comment`
     redirect_to post_path(@comment.post)
   end
 
   def edit
-    # Return view for editing the comment
+    # Return view for editing the `Comment`
     @comment = Comment.find(params[:id])
   end
 
   def update
-    # Update a comment
+    # Update a `Comment`
     @comment = Comment.find(params[:id])
     @comment.update(comment_params)
 
