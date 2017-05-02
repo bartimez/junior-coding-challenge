@@ -6,22 +6,31 @@
     
       <h2 class="one-blog-post-title"><%= @post.title %></h2>
       <p class="one-blog-post-body"><%= @post.body %></p>
-      <div class="btn btn-default submit-btn"><%= link_to "Delete Post", post_path(@post), method: :delete %></div>
+
+      <!-- link to delete this post -->
+      <!-- delete redirects to show all posts, see post controller-->
+      <div class="btn btn-default submit-btn"><%= link_to "Delete Post", post_path(@post), method: 'delete' %></div>
+      <!-- end link -->
+
+      <!-- link to show all posts - view index.html.erb --> 
       <div class="btn btn-default submit-btn"><%= link_to "Back to All Posts", posts_path %></div>
-
+      <!-- end link -->
       <hr>
-
+      
+      <!-- begin comments area -->
       <h3 class="comment-title">Comments (<%= @post.comments.size %>)</h3>
 
       <hr>
 
-      <!-- render the comments assoc'd with this post -->
+      <!-- render the collection of comments assoc'd with this post -->
       <!-- expects app/views/posts/_comment.html.erb -->
       <%= render partial: 'posts/comment', collection: @post.comments %>
       
       <!-- render a form for posting a new comment -->
       <!-- expects app/views/comments/_form.html.erb -->
       <%= render partial: 'comments/form' %>
+
+      <!-- end comments area -->
 
     </div>
     

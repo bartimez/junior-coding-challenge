@@ -1,17 +1,19 @@
 <!-- View for showing all `Post` -->
 <div class="container">
-
+  
+  <!-- begin main title -->
   <div class="blog-top">
     <h1 class="blog-title">CareerBlog</h1>
     <p class="blog-description">A blog about anything other than Lorem Ipsum.</p>
   </div>
-
+  <!-- end main title -->
+  
   <hr>
 
   <div class="row">
 
     <!-- begin main column -->
-    <div class="col-sm-9 blog-main"> 
+    <div class="col-sm-9 blog-main">
     <% if @posts.blank? %>
       <p>Sorry, no posts! Why don't you write one?</p>
     <% else %>
@@ -20,7 +22,12 @@
           <h2 class="blog-post-title"><%= post.title %></h2>
           <p class="blog-post-timestamp">Posted <b><%= time_ago_in_words(post.created_at)%></b> ago</p>
           <p class="blog-post-body"><%= post.body[0..200] %> . . .</p>
+
+          <!-- link to show one `Post` - view show.html.erb -->
+          <!-- pass the post id to the path -->
           <div class="btn btn-default submit-btn"><%= link_to "Comments (#{post.comments.size})", post_path(post), class: 'post_title' %></div>
+          <!-- end link -->
+
         </div>
         <hr>
       <% end %>

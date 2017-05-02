@@ -5,9 +5,15 @@
     Posted <b><%= time_ago_in_words(comment.created_at) %></b> ago
   </p>
 
+  <!-- link to delete this post -->
+  <!-- pass post ID and comment ID -->
+  <!-- delete redirects to single `Post` view, see comments controller-->
   <div class="btn btn-default submit-btn-cmt">
     <%= link_to "Delete Comment", post_comment_path(comment.post.id, comment.id), method: 'delete' %>
   </div>
+  <!-- end link -->
+  <!-- link to edit comment - view edit.html.erb -->
+  <!-- pass post ID and comment ID -->
   <div class="btn btn-default submit-btn-cmt">
     <%= link_to "Edit Comment", edit_post_comment_path(comment.post.id, comment.id), method: 'get' %>
   </div>
