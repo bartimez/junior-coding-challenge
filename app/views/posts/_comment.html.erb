@@ -1,5 +1,7 @@
-<div>
+<div class="container comment-container">
   <p class="comment"><%= comment.body%></p>
-  <p>Posted <%= distance_of_time_in_words(comment.post.created_at, comment.created_at) %> later</p>
-  <%= link_to "Delete Comment", post_comment_path(comment.post.id, comment.id), method: :delete %>
+  <p class="comment-timestamp">Posted <b><%= distance_of_time_in_words(comment.post.created_at, comment.created_at) %></b> later</p>
+  <div class="btn btn-default btn-sm"><%= link_to "Delete Comment", post_comment_path(comment.post.id, comment.id), method: :delete %></div>
 </div>
+
+<hr>

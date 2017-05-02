@@ -1,13 +1,26 @@
 <!-- View for showing a single `Post` -->
-<h1><%= @post.title %></h1>
-<p><%= @post.body %></p>
-<%= link_to "Delete Post", post_path(@post), method: :delete %>
-<%= link_to "Back to All Posts", posts_path %>
-<h3>Comments (<%= @post.comments.size %>)</h3>
-<!-- render a form for posting a new comment -->
-<!-- expects app/views/comments/_form.html.erb -->
-<!-- TO LOOK UP: Removing the partials here threw an error in my _comment.html.erb file-->
-<%= render partial: 'comments/form' %>
-<!-- render the comments assoc'd with this post in reverse order -->
-<!-- expects app/views/posts/_comment.html.erb -->
-<%= render partial: 'posts/comment', collection: @post.comments.reverse %>
+<div class="container">
+  <div class="col-sm-12 blog-main">
+    <div class="blog-post">
+      <h2 class="blog-post-title"><%= @post.title %></h2>
+      <p><%= @post.body %></p>
+      <div class="btn btn-default"><%= link_to "Delete Post", post_path(@post), method: :delete %></div>
+      <div class="btn btn-default"><%= link_to "Back to All Posts", posts_path %></div>
+
+      <hr>
+
+      <h3>Comments (<%= @post.comments.size %>)</h3>
+
+      <hr>
+
+      <!-- render the comments assoc'd with this post -->
+      <!-- expects app/views/posts/_comment.html.erb -->
+      <%= render partial: 'posts/comment', collection: @post.comments %>
+      
+      <!-- render a form for posting a new comment -->
+      <!-- expects app/views/comments/_form.html.erb -->
+      <%= render partial: 'comments/form' %>
+
+    </div>
+  </div>
+</div>

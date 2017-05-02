@@ -1,16 +1,45 @@
 <!-- View for showing all `Post` -->
+<div class="container">
 
-<% if @posts.blank? %>
-  <p>Sorry, no posts!</p>
-<% else %>
-  <div id="posts">
-    <% @posts.each do |post| %>
-      <div class="post">
-        <h2><%= post.title %></h2>
-        <p><%= post.body[0..200] %> . . .</p>
-        <%= link_to "Comments", post_path(post), class: 'post_title' %>
-      </div>
-    <% end %>
+  <div class="blog-top">
+    <h1 class="blog-title">CareerBlog</h1>
+    <p class="lead blog-description">A blog about video games, so I don't have to repeatedly copy and paste Lorem Ipsum.</p>
   </div>
-<% end %>
 
+  <div class="row">
+
+    <!-- begin main column -->
+    <div class="col-sm-8 blog-main"> 
+    <% if @posts.blank? %>
+      <p>Sorry, no posts!</p>
+    <% else %>
+      <% @posts.each do |post| %>
+        <div class="blog-post">
+          <h2 class="blog-post-title"><%= post.title %></h2>
+          <p><%= post.body[0..200] %> . . .</p>
+          <div class="btn btn-default"><%= link_to "Comments", post_path(post), class: 'post_title' %></div>
+        </div>
+      <% end %>
+    <% end %>
+    </div>
+    <!-- end main column --> 
+
+    <!-- begin sidebar -->
+    <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+      <div class="sidebar-module sidebar-module-inset">
+        <h4>About</h4>
+        <p>Freshly minted, very determined lady dev seeks employment at CareerPlug by making a blog about video games.</p>
+      </div>
+      <div class="sidebar-module">
+        <h4>Me, In the Wild</h4>
+        <ol class="list-unstyled">
+          <li><a href="https://github.com/bartimez">GitHub</a></li>
+          <li><a href="http://linkedin.com/in/brittany-artimez">LinkedIn</a></li>
+        </ol>
+      </div>
+    </div>
+    <!-- end sidebar -->
+
+  </div> <!-- end row -->
+
+</div> <!-- end container-->

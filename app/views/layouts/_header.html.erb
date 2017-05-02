@@ -1,12 +1,9 @@
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
   <div class="container">
-    <div class="navbar-header">
-      <%= link_to "CareerBlog", root_path, class: "navbar-brand" %>
-    </div>
     <div id="navbar">
       <ul class="nav navbar-nav navbar-left">
-        <li><%= link_to "See All Posts", root_path, class: "nav-button" %></li>
-        <li><%= link_to "Create a New Post", new_post_path, class: "nav-button" %></li>
+        <li><%= link_to "See All Posts", root_path, class: "blog-nav-item" %></li>
+        <li><%= link_to "Create a New Post", new_post_path, class: "blog-nav-item" %></li>
       </ul>
     </div>
     <%= form_tag(posts_path, method: :get, class: "navbar-form navbar-right") do %>

@@ -1,11 +1,12 @@
-<h3>Post a New Comment</h3>
+
+<h3>Leave a Comment:</h3>
 
 <%= form_for [ @post, @comment ] do |f| %>
-  <p>
-    <%= f.label :body %><br />
-    <%= f.text_area :body %>
-  </p>
-  <p>
-    <%= f.submit 'Make a Comment' %>
-  </p>
+  <div class="form-group">
+    <p>
+      <%= f.text_area :body, class: "form-control" %>
+    </p>
+    <p>
+      <%= f.submit 'Make a Comment', class: "btn btn-default" %>
+    </p>
 <% end %>
