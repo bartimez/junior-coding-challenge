@@ -12,9 +12,6 @@
   <body>
     <%= render partial: 'layouts/header' %>
 
-    <!-- output our various notices upon user action -->
-    <p class="flash"><%= flash.notice %></p>
-
     <!-- yield tag - where content from the view should be inserted -->
     <%= yield %>
   </body>
